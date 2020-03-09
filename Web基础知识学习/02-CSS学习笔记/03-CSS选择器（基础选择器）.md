@@ -34,7 +34,6 @@
         }
     </style>
 </head>
-<!-- 01-标签选择器 -->
 <body>
     <p>这里是一段p标签的内容</p>
     <span>这里是span中的内容</span>
@@ -84,7 +83,6 @@
         }
     </style>
 </head>
-<!-- 02-类选择器 -->
 <body>
     <span class="blue">G</span>
     <span class="red">o</span>
@@ -134,7 +132,6 @@
         }
     </style>
 </head>
-<!-- 03-多类名选择器 -->
 <body>
     <div class="s-font red">字体大小14px，红色</div>
     <div class="s-font blue">字体大小14px，蓝色</div>
@@ -168,7 +165,6 @@
         }
     </style>
 </head>
-<!-- 04-id选择器 -->
 <body>
     <p id="id-select">这是id选择器</p>
 </body>
@@ -240,7 +236,6 @@
         }
     </style>
 </head>
-<!-- 05-伪类选择器 -->
 <body>
     <a href="#" class="lk">链接标签</a>
 </body>
@@ -280,7 +275,6 @@
         }
     </style>
 </head>
-<!-- 05-结构伪类选择器 -->
 <body>
     <ul>
         <li>第一行</li>
