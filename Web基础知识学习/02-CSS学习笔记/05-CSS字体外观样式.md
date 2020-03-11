@@ -295,6 +295,50 @@ color: rgba(r,g,b,a);
 </body>
 ```
 
+
+> **使用技巧**：在一行内的盒子内，我们设定行高等于盒子的高度，就可以使文字垂直居中。(盒子只有一行文本有效，多了就不行了)
+
+## 文本的装饰
+&emsp;&emsp;text-decoration通常我们用于给链接修改装饰效果：
+
+值 | 描述
+- | -
+none| 默认。定义标准的文本
+underline | 定义文本下的一条线(下划线也是我们链接自带的)
+overline | 定义文本上的一条线
+line-through | 定义穿过文本下的一条线
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .none{
+            text-decoration: none;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+        .overline{
+            text-decoration: overline;
+        }
+        .linethrough{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <span class="none">aaaa</span><br>
+    <span class="underline">aaaa</span><br>
+    <span class="overline">aaaa</span><br>
+    <span class="linethrough">aaaa</span><br>
+</body>
+</html>
+```
+
 ## 水平对齐方式（text-align）
 &emsp;&emsp;text-align属性用于设置文本内容的水平对齐，相当于html中的align对齐属性。其可用属性值如下：
 
