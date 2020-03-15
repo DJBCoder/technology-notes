@@ -1,0 +1,38 @@
+/* 清除边框 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 清除浮动 */
+.clearfix::after ,
+.clearfix::before {
+    content: "";
+    float: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+/* 去除无序列表的原点 */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 版心 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}

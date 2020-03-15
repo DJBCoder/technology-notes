@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学成网案例</title>
+    <style>
+        .banner {
+            height: 420px;
+            background-color: #1c036c;
+        }
+        .banner-scroll-img {
+            height: 420px;
+            background: url(./images/banner_03.png) no-repeat;
+            position: relative;
+        }
+        .banner-circle {
+            position: absolute;
+            width: 200px;
+            bottom: 20px;
+            height: 12px;
+            left: 50%;
+            margin-left: -100px;
+        }
+        .banner-circle li {
+            background-color: rgba(255, 255, 255, .4);
+            border-radius: 50%;
+            height: 12px;
+            width: 12px;
+            float: left;
+            margin-right: 12px;
+        }
+        .banner-circle li:first-child {
+            background-color: rgba(255, 255, 255);
+            border-radius: 5px;
+            height: 12px;
+            width: 18px;
+        }
+        .banner-left {
+            height: 420px;
+            width: 190px;
+            background-color: rgba(0, 0, 0, 0.4);
+            float: left;
+        }
+        .banner-left a {
+            color: #fff;
+            font-size: 14px;
+            padding: 0 20px;
+            display: block;
+            /* 很多情况下，单行的时候给了行高可以不给高度 */
+            line-height: 45px;
+        }
+        .banner-left a:hover {
+            color: #00a4ff;
+        }
+        .banner-left span {
+            float: right;
+            font-family: arial;
+        }
+        .banner-right {
+            height: 420px;
+            width: 200px;
+            background-color: red;
+            float: right;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="logo">
+                <img src="./images/logo_03.png" alt="">
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">职业规划</a></li>
+                </ul>
+            </div>
+            <div class="person">
+                <a href="#">
+                    个人中心 <img src="./images/ling_06.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./images/tou_03.png" alt=""> 张三
+                </a>
+            </div>
+            <div class="search">
+                <input type="text">
+                <input type="submit" value="">
+            </div>
+        </div>
+        
+    </div>
+    <div class="banner">
+        <div class="container banner-scroll-img">
+            <div class="banner-circle">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="banner-left clearfix">
+                <ul>
+                    <li><a href="#">前端开发 <span>></span> </a></li>
+                    <li><a href="#">后端开发 <span>></span> </a></li>
+                    <li><a href="#">移动开发 <span>></span> </a></li>
+                    <li><a href="#">人工智能 <span>></span> </a></li>
+                    <li><a href="#">商业预测 <span>></span> </a></li>
+                    <li><a href="#">云计算&大数据 <span>></span> </a></li>
+                    <li><a href="#">运维&从测试 <span>></span> </a></li>
+                    <li><a href="#">UI设计 <span>></span> </a></li>
+                    <li><a href="#">产品 <span>></span> </a></li>
+                </ul>
+            </div>
+            <div class="banner-right"></div>
+        </div>
+    </div>
+</body>
+</html>
