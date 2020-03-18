@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(./images/wx.jpg) repeat-x;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            height: 75px;
+        }
+        .nav li {
+            float: left;
+            margin: 0 10px;
+            padding-top: 20px;
+        }
+        .nav a {
+            display: inline-block;
+            background: url(./images/to.png) no-repeat;
+            padding-left: 15px;
+            color: white;
+            line-height: 33px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .nav a span {
+            display: inline-block;
+            background: url(./images/to.png) no-repeat right;
+            padding-right: 15px;
+            line-height: 33px;
+        }
+        .nav ul {
+            margin-left: 20px;
+            list-style: none;
+        }
+        .nav li a:hover {
+            background: url(./images/ao.png) no-repeat;
+        }
+        .nav li a:hover span{
+            background: url(./images/ao.png) no-repeat right;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>帮助与反馈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>公众平台</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
