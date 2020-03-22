@@ -352,3 +352,79 @@ text-overflow : clip | ellipsis
 </body>
 </html>
 ```
+
+## 多行文本移除隐藏显示省略号
+### 使用webkit
+
++ 使用-webkit-line-clamp属性来限定块元素内文本显示的行数
++ 使用display: -webkit-box; 将对象作为弹性的伸缩盒子显示
++ 使用-webkit-box-orient 设置伸缩盒子对象内子对象的排列方式
++ text-overflow:ellipsis; 使用省略号告诉用户有内容未显示
++ overflow：hidden; 超出部分隐藏
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p {
+           display: -webkit-box;
+           -webkit-box-orient: vertical;
+           -webkit-line-clamp: 2;
+           overflow: hidden;
+           text-overflow: ellipsis;
+       }
+    </style>
+</head>
+<body>
+    <p>用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+    </p>
+</body>
+</html>
+```
+
+### 通用方式
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p {
+           height: 30px;
+           line-height: 2em;
+           overflow: hidden;
+           position: relative;
+       }
+       P::after {
+           content: "...";
+           position: absolute;
+           right: 0;
+           bottom: 0;
+           background-color: #fff;
+           padding: 0px 7px 0px 7px;
+       }
+    </style>
+</head>
+<body>
+    <p>用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+        用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数用该属性来限定块元素内文本显示的行数
+    </p>
+</body>
+</html>
+```
