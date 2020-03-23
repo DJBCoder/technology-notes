@@ -428,3 +428,232 @@ text-overflow : clip | ellipsis
 </body>
 </html>
 ```
+
+# 垂直居中的三种方式
+
+1. 先让盒子的上下边缘和父盒子的水平中心线重叠，然后再让盒子往回移动自身的一半距离
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>
+```
+
+2. 使用表格的vertical-align:middle实现盒子垂直居中
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>
+```
+
+3. 使用margin计算盒子的上下边距，使得盒子居中
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            margin-top: 49px;
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>
+```
+
+# 水平垂直的四种方式
+
+1. 使用margin:0 auto
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>
+```
+
+2. 使用margin左右边距
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            margin-left: 49px;
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>
+```
+
+3. 先让盒子左右边缘和父盒子垂直的中心线重叠，然后在把子盒子往回移动自身宽度的一半
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>
+```
+
+4. 把盒子转换成行内块，然后使用text-align属性使盒子水平居中
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            text-align: center;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>
+```
