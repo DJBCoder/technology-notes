@@ -305,7 +305,7 @@ console.log(str - 0);
 
 ### 转换成布尔类型
 
-&emsp;&emsp;使用Boolean()方法，0、''(空字符串)、null、undefined和NaN会转换成false  其它都会转换成true。
+&emsp;&emsp;使用Boolean()方法，0、''(空字符串)、null、undefined和NaN会转换成false，其它都会转换成true。
 
 ```javascript
 var str = "123"
